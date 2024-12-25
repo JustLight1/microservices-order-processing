@@ -1,8 +1,10 @@
-from django.core.management.base import BaseCommand
-from kafka import KafkaConsumer
-from payments.models import Payment, OutboxPayment
 import json
+
+from django.core.management.base import BaseCommand
 from django.db import transaction
+from kafka import KafkaConsumer
+
+from payments.models import OutboxPayment, Payment
 
 
 class Command(BaseCommand):

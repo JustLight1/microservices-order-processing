@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Payment, OutboxPayment
+from .models import OutboxPayment, Payment
 
 
 @admin.register(Payment)

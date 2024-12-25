@@ -1,6 +1,7 @@
-from django.core.management.base import BaseCommand
-from kafka import KafkaConsumer
 import json
+
+from kafka import KafkaConsumer
+from django.core.management.base import BaseCommand
 
 
 class BaseKafkaConsumerCommand(BaseCommand):

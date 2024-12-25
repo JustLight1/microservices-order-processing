@@ -1,9 +1,10 @@
-from rest_framework import viewsets, status
-from rest_framework.response import Response
 from django.db import transaction
-from orders.models import Order, OutboxOrder
-from .serializers import OrderSerializer
+from rest_framework import status, viewsets
+from rest_framework.response import Response
+
 from .producer import send_outbox_messages
+from .serializers import OrderSerializer
+from orders.models import Order, OutboxOrder
 
 
 class OrderViewSet(viewsets.ModelViewSet):

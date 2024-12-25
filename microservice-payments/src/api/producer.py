@@ -1,7 +1,8 @@
+import json
 
 from kafka import KafkaProducer
+
 from payments.models import OutboxPayment
-import json
 
 
 def send_outbox_messages():

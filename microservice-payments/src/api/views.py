@@ -1,9 +1,11 @@
-from rest_framework import viewsets, status
-from rest_framework.response import Response
 from django.db import transaction
-from payments.models import Payment, OutboxPayment
-from .serializers import PaymentSerializer
+from rest_framework import status, viewsets
+from rest_framework.response import Response
+
+from payments.models import OutboxPayment, Payment
+
 from .producer import send_outbox_messages
+from .serializers import PaymentSerializer
 
 
 class PaymentViewSet(viewsets.ModelViewSet):

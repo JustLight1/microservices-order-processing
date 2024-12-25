@@ -1,6 +1,8 @@
-from kafka import KafkaProducer
-from orders.models import OutboxOrder
 import json
+
+from kafka import KafkaProducer
+
+from orders.models import OutboxOrder
 
 
 def send_outbox_messages():
